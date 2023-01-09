@@ -1,5 +1,4 @@
 import express from 'express';
-import helloRoutes from './routes/hello.routes';
 import morgan from 'morgan';
 import cors from 'cors';
 
@@ -12,8 +11,6 @@ const main = async () => {
   app.use(express.json()); // to allow parsing json data from the request body
   app.use(morgan('dev')); // to log all requests
   app.use(cors()); // to allow cross-origin requests
-
-  //app.use(helloRoutes); // to use the hello routes
 
   app.use(
     '/trpc',
