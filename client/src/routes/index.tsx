@@ -15,7 +15,7 @@ const IndexPage = () => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (name.trim().includes('')) return;
+    if (name.trim().length === 0) return;
 
     // usamos la instancia y el metodo mutate para enviar los datos - equivale a hacer un fetch de tipo POST y el mutat seria el body()
     mutation.mutate(
